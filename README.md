@@ -19,17 +19,24 @@ The magic number is a 128-bit number consisting of the following 32-bit numbers:
 
 The numbers were chosen for no reason other than having a relatively nice distribution and telling a good story ('2357 died, ate bad food at a bad cafe. Dead too bad').
 
-## Round diagram
+## Round diagram & Reference implementation
 
-A basic visual display of how the round works can be found here:.
+A basic visual display of how the round works can be found [here](https://github.com/samuel-crypto/addrix/raw/master/Addrix%20Round(2).png).
+
+This repository also contains a reference implementation (`addrix.c` and `addrix.h`) + example use (`main.c`).
+The compiler will scream at you because I didn't clean the code but I don't care because it's a challenge (pls don't be mad).
 
 ## Test vectors
 
 Encrypting an all 0s plaintext with an all 0s key should yield the following sequence of bytes (in decimal): 
 ```
-1, 2, 3,...
+99, 22, 130, 119, 210, 7, 150, 25, 223, 97, 224, 115, 2, 91, 81, 2
 ```
 
+Same as above except with the last (rightmost) bit of the plaintext set to 1 will yield:
+```
+106, 245, 178, 108, 103, 56, 86, 0, 26, 19, 50, 17, 189, 218, 210, 153
+```
 
 ## Overview of different parameters
 Basic recommendation: **32** rounds and **8** key-scheduling rounds (**spiciness**).
