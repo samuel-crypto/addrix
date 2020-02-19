@@ -28,7 +28,7 @@ The compiler will scream at you because I didn't clean the code but I don't care
 
 ## Test vectors
 
-Encrypting an all 0s plaintext with an all 0s key should yield the following sequence of bytes (in decimal): 
+Encrypting an all 0s plaintext with an all 0s key (**5 rounds and 5 spiciness**) should yield the following sequence of bytes (in decimal): 
 ```
 99, 22, 130, 119, 210, 7, 150, 25, 223, 97, 224, 115, 2, 91, 81, 2
 ```
